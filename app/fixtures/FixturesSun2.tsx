@@ -15,7 +15,7 @@ const FixturesSun2 = () => {
         const data = await response.json();
         setFixtures(data.matches || []);
       } catch (err) {
-        setError("Failed to fetch fixtures.");
+        console.error("An error occurred:", err);
       } finally {
         setLoading(false);
       }
